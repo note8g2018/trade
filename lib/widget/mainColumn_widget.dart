@@ -9,23 +9,17 @@ class MainColumnWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Flexible(
-      fit: FlexFit.loose,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        //mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Flexible(
-            fit: FlexFit.loose,
-            child: TileWidget(
-              leading: Icon(Icons.home),
-              title: Text('Overview'),
-              trailing: Container(),
-            ),
-          ),
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TileWidget(
+          leading: Icon(Icons.home),
+          title: Text('Overview'),
+          trailing: Container(),
+        ),
+      ],
     );
   }
 }
