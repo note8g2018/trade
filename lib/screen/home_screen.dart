@@ -8,20 +8,32 @@ class Home extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Betha Bank",
-
-        ),
-      ),
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-              margin: EdgeInsets.zero,
-              padding: EdgeInsets.all(10.0),
+              color: Colors.green,
+              child: SearchWidget(),
+            ),
+            Flexible(
+              fit: FlexFit.loose,
+              child: Container(
+                color: Colors.amberAccent,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      color: Colors.greenAccent,
+                      child: MainColumnWidget(),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
