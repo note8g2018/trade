@@ -31,6 +31,10 @@ class Home extends StatelessWidget
                       color: Colors.greenAccent,
                       child: MainColumnWidget(),
                     ),
+                    Container(
+                      //color: Colors.greenAccent,
+                      child: Column2Widget(),
+                    ),
                   ],
                 ),
               ),

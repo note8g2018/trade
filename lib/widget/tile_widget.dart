@@ -18,20 +18,18 @@ class TileWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          leading,
-          SizedBox(width: 8,),
-          title,
-          SizedBox(width: 8,),
-          trailing,
-        ],
-      ),
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      textBaseline: TextBaseline.alphabetic,
+      children: [
+        leading,
+        SizedBox(width: 8,),
+        title,
+        SizedBox(width: 8,),
+        trailing,
+      ],
     );
   }
 }
